@@ -58,20 +58,29 @@ use northwind;
 -- 15. SELECT *
 -- FROM suppliers;
 
--- 16. SELECT SupplierID, CompanyName
--- FROM suppliers
--- WHERE CompanyName = "Tokyo Traders";
+--  16. SELECT SupplierID, CompanyName
+--  FROM suppliers
+--  WHERE CompanyName = "Tokyo Traders";
 
--- SELECT *
--- FROM products
--- WHERE SupplierID = "4";
+--  SELECT *
+--  FROM products
+--  WHERE SupplierID = "4";
 
--- SELECT *
--- FROM products
+--  SELECT *
+--  FROM products
+--  WHERE SupplierID = (
+--      SELECT SupplierID
+--      FROM suppliers
+--      WHERE CompanyName = 'Tokyo Traders'
+-- );
+
+-- OR alternative option
+
+-- 16. select * from Products
 -- WHERE SupplierID = (
---     SELECT SupplierID
---     FROM suppliers
---     WHERE CompanyName = 'Tokyo Traders'
+--   SELECT SupplierID 
+--   from Suppliers s 
+--   WHERE s.CompanyName = "Tokyo Traders" 
 -- );
 
 -- FOR COMMENTS 
